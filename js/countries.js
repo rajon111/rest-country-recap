@@ -6,7 +6,7 @@ const loadCountries =() =>{
 const showCountries =countries=>{
     console.log(countries);
     const allCountriesHTML = countries.map(country =>getCountryHTML(country))
-    console.log(allCountriesHTML.join(' '));
+    // console.log(allCountriesHTML.join(' '));
     const container = document.getElementById('countries')
     container.innerHTML = allCountriesHTML.join(' ')
 
@@ -36,13 +36,19 @@ const getCountryHTML =country =>{
 }
 ========================*/
 
-// /*===========option1=========
-const getCountryHTML =country =>{
-    const{name,flags} = country
+// /*===========option2=========
+const getCountryHTML =({name,flags,population,region,timezones}) =>{
+    
     return `
      <div class= "country">
        <h2> Name: ${name.common}</h2>
+
        <img src="${flags.png}" alt="">
+
+       <p>Population: ${population} </p>
+       <p>Region: ${region} </p>
+       <p>Timezones: ${timezones} </p>
+
      </div>
     
     `

@@ -4,6 +4,7 @@
     border-radius: 15px;
     padding: 15px;
     text-align: center;
+    overflow: hidden;
 }
 .country img{
     width: 200px;
